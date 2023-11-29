@@ -1,0 +1,23 @@
+#id-box {
+    position: relative;
+    margin: 50px;
+    padding: 10px 20px;
+    border: 5px double blue;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    border-spacing: 2px;
+    outline: 5px double goldenrod;
+    font-size: clamp(
+        1.5rem,
+        7vw + 0.75rem,
+        4rem
+    );
+    top: 20px;
+
+} 
+
+.desafio {
+    background-color: green;
+    padding: 3px 8px;
+}
