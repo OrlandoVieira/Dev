@@ -236,7 +236,7 @@ reverseTest.reverse();
 
 console.log(reverseTest);
 
-// 18 - Trim
+// 18 - trim
 const trimTest = "   testando \n   ";
 
 console.log(trimTest);
@@ -259,3 +259,113 @@ console.log(newNumber);
 const testPadEnd = newNumber.padEnd(10, "0");
 
 console.log(testPadEnd);
+
+// 20 - split
+const frase = "O rato roeu a roupa do rei de Roma";
+
+const arrayDaFrase = frase.split(" ");
+
+console.log(arrayDaFrase);
+
+// 21 - join
+const fraseDeNovo = arrayDaFrase.join(" ");
+
+console.log(fraseDeNovo);
+
+const itensParaComprar = ["mouse", "Teclado", "Monitor"];
+
+const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}.`;
+console.log(fraseDeCompra);
+
+// 22 - repeat
+const palavra = "Testando ";
+
+console.log(palavra.repeat(5));
+
+// 23 - rest operator
+const somaInfinita = (...args) => {
+  let total = 0;
+
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  }
+
+  return total;
+};
+
+console.log(somaInfinita(1, 2, 3));
+
+console.log(
+  somaInfinita(21, 321, 456321, 498654321, 65498789654654, 12315498794564)
+);
+
+// 24 - for of
+const somaInfinita2 = (...args) => {
+  let total = 0;
+
+  for (num of args) {
+    total += num;
+  }
+
+  return total;
+};
+
+console.log(somaInfinita(1, 2, 4));
+
+console.log(somaInfinita(5, 6, 2, 3, 6, 1, 34, 6));
+
+//  25 - destructuring em objetos
+const userDetails = {
+  firstName: "Orlando",
+  lastName: "Vieira",
+  job: "Programador",
+};
+
+const { firstName, lastName, job } = userDetails;
+
+console.log(firstName, lastName, job);
+
+// renomear variáveis
+const { firstName: primeiroNome } = userDetails;
+
+console.log(primeiroNome);
+
+// 26 - destructuring with arrays
+const myList = ["Avião", "Submarino", "Carro"];
+
+const [veiculoA, veiculoB, veiculoC] = myList;
+
+console.log(veiculoA, veiculoB, veiculoC);
+
+// 27 - JSON
+const myJson =
+  '{"name": "Orlando", "age": 34, "skills": ["Html", "JavaScript", "Python"]}';
+
+console.log(myJson);
+
+console.log(typeof myJson);
+
+// 28 - JSON para objeto e objeto para JSON
+
+const myObject = JSON.parse(myJson);
+
+console.log(myObject);
+
+console.log(myObject.name);
+
+console.log(typeof myObject);
+
+// json invalido
+const badJson = '{"name": Orlando, "age": 34}';
+
+// const myBadObject = JSON.parse(badJson);
+
+myObject.isOpenToWork = true;
+
+console.log(myObject);
+
+const myNewJson = JSON.stringify(myObject);
+
+console.log(myNewJson);
+
+console.log(typeof myNewJson);
